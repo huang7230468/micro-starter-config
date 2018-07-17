@@ -15,7 +15,7 @@ spring:
       test-on-borrow: true
       stat-view-servlet:
         allow: true
-  reidis:
+  redis:
     # 是否开启redis缓存  true开启   false关闭
     open: true
     database: 1
