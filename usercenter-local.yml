@@ -10,3 +10,18 @@ zipkin:
   hostname: dev.zipkin.swhyscmiro
   server:
     prot: 7002
+    
+    
+eureka:
+  client:
+      service-url:
+        defaultZone: http://${eureka.hostname}:${eureka.server.port}/eureka
+  instance:
+      prefer-ip-address: true
+ 
+spring:
+  zipkin:
+     base-url:  http://${zipkin.hostname}:${zipkin.server.prot}
+  cloud:
+      config:
+        uri: http://${cloud.config.hostname}:${cloud.config.port}
