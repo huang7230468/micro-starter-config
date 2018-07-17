@@ -7,7 +7,7 @@ env:
   eureka:
     server:
       port: 9001
-    hostname: http://118.25.35.116
+    hostname: 118.25.35.116
   zipkin:
     hostname: dev.zipkin.swhyscmiro
     server:
