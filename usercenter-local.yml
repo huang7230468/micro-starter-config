@@ -1,5 +1,3 @@
 feign:
   url:
     servicename: localhost:9003
-
-
