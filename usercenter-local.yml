@@ -2,26 +2,25 @@ feign:
   url:
     servicename: localhost:9003
     
-eureka:
-  server:
-    port: 9001
-  hostname: http://118.25.35.116
-zipkin:
-  hostname: dev.zipkin.swhyscmiro
-  server:
-    prot: 7002
+    
+env:
+  eureka:
+    server:
+      port: 9001
+    hostname: http://118.25.35.116
+  zipkin:
+    hostname: dev.zipkin.swhyscmiro
+    server:
+      prot: 7002
     
     
 eureka:
   client:
       service-url:
-        defaultZone: http://${eureka.hostname}:${eureka.server.port}/eureka
+        defaultZone: http://${env.eureka.hostname}:${env.eureka.server.port}/eureka
   instance:
       prefer-ip-address: true
  
 spring:
   zipkin:
-     base-url:  http://${zipkin.hostname}:${zipkin.server.prot}
-  cloud:
-      config:
-        uri: http://${cloud.config.hostname}:${cloud.config.port}
+     base-url:  http://${env.zipkin.hostname}:${env.zipkin.server.prot}
