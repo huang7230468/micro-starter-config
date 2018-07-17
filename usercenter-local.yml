@@ -1,6 +1,6 @@
 feign:
   url:
-    servicename: localhost:9002
+    servicename: localhost:9003
 
 spring:
   datasource:
