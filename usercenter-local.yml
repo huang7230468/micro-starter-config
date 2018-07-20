@@ -24,3 +24,10 @@ eureka:
 spring:
   zipkin:
      base-url:  http://${env.zipkin.hostname}:${env.zipkin.server.prot}
+     
+     
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.antz.usercenter.dao.domain
+mapper:
+  mappers: com.antz.usercenter.dao.utils.BaseMapper
