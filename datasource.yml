@@ -32,3 +32,8 @@ spring:
       # 连接池中的最小空闲连接
       min-idle: 5
     expire: 30000
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.antz.usercenter.dao.domain
+mapper:
+  mappers: com.antz.usercenter.dao.utils.BaseMapper
