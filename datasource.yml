@@ -1,7 +1,7 @@
 
 spring:
   datasource:
-    url: jdbc:oracle:thin:@118.25.35.116:1521:helowin
+    url: jdbc:oracle:thin:@118.25.35.116:1522:helowin
     username: swhy
     password: password
     driver-class-name: oracle.jdbc.driver.OracleDriver
