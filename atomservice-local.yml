@@ -1,0 +1,27 @@
+env:
+  eureka:
+    server:
+      port: 9001
+    hostname: 118.25.35.116
+  zipkin:
+    hostname: dev.zipkin.swhyscmiro
+    server:
+      prot: 7002
+
+eureka:
+  client:
+      service-url:
+        defaultZone: http://${env.eureka.hostname}:${env.eureka.server.port}/eureka
+  instance:
+      prefer-ip-address: true
+
+spring:
+  zipkin:
+     base-url:  http://${env.zipkin.hostname}:${env.zipkin.server.prot}
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.swhysc.atomservice.dao.domain
+mapper:
+  mappers: com.swhysc.atomservice.dao.utils.BaseMapper
